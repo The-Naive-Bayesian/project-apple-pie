@@ -15,9 +15,9 @@ fn main() {
             .expect("Unable to read meal option");
 
         let meal = entry.trim().to_owned();
-        meals.push(meal.clone());
 
         println!("\nYou entered: '{meal}'\n");
+        meals.push(meal);
 
         println!("So far you have entered the following meals:");
         for item in &meals {
