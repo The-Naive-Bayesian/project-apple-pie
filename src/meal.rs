@@ -18,4 +18,7 @@ impl MealOptionTracker {
     pub fn add(&mut self, name: &String) {
         self.options.entry(name.clone()).and_modify(|e| e.votes += 1).or_insert(MealOption {name: name.clone(), votes: 0});
     }
+    pub fn vote(&mut self, name: &String) {
+        self.options.entry(name.clone()).and_modify(|e| e.votes += 1);
+    }
 }
